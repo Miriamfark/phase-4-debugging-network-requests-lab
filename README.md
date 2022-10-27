@@ -63,11 +63,18 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+  1. checked console messages, got 500 internal server error
+  2. checked server log, got name error in controller - fixed typo Toys to Toy
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  1. checked console for messages, got unexpected end of json input
+  2. checked controller if sending a json response, added render json: toy
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  1. checked console for messages, got not found message
+  2. checked server log, saw no matching route
+  3. checked routes.rb file, added :destroy
